@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+.hexagon-cursor {
+  background:#00ffcc;
+  clip-path: polygon(
+    50% 0%,   /* Top */
+    100% 25%, /* Top-right */
+    100% 75%, /* Bottom-right */
+    50% 100%, /* Bottom */
+    0% 75%,   /* Bottom-left */
+    0% 25%    /* Top-left */
+  );
+}
+
+.text-highlight {
+  color: #00ffcc; /* Nova cor do texto */
+  transition: color 0.3s ease;
+}
+
