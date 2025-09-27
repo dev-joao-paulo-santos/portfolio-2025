@@ -6,54 +6,58 @@ import SpaceWarp from "./components/page/SpaceWarp";
 import BacksideCubes from "./components/page/BacksideCubes";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Cursor from "./components/page/Cursor";
+import CursorFollow from "./components/page/CursorFollow";
+import Carousel from "./components/page/Carousel";
+import Skills from "./components/page/Skills";
+import Contato from "./components/page/Contato";
 
 function App() {
-  const sectionRef = useRef(null); 
-  const hoverRef = useRef(null)
+  const [showContato, setShowContato] = useState(false);
+  const sectionRef = useRef(null);
+  const hoverRef = useRef(null);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
+    Aos.refresh();
   }, []);
 
   return (
-    <div className="w-screen h-screen overflow-auto overflow-x-hidden font-[Poppins]" >
-      <Header />
-      {/* Passando a ref para o Section */}
-      <Section background={"linear-gradient(#145653, #0C312F, #021212, black)"} ref={sectionRef}>
-        {/* Passando a ref para o Cursor */}
-        <Cursor sectionRef={sectionRef} hoverRef={hoverRef}/>
+    <div id="about_me" className="w-screen h-screen overflow-auto overflow-x-hidden font-[Poppins]">
+      <Header onContatoClick={() => setShowContato(true)} />
+      <Section
+        background={"linear-gradient(#145653, #0C312F, #021212, black)"}
+        ref={sectionRef}>
+        <CursorFollow sectionRef={sectionRef} hoverRef={hoverRef} />
         <div
           ref={hoverRef}
-          data-aos='fade-right'
           className="w-3/6 h-3/6 flex flex-col justify-center z-20">
-          <h1 className="text-white text-6xl font-bold">Hello there!</h1>
-          <h3 className="text-white text-xl font-bold my-6">I'm João Paulo</h3>
-          <p className="text-white text-lg">
-            A 19-year-old front-end developer from Brazil passionate about
-            creating engaging and interactive web experiences. I specialize in
-            building modern, responsive, and visually striking websites using
-            tools like HTML, CSS, JavaScript, React, and Three.js. With a solid
-            foundation in front-end technologies and a creative mindset, I
-            strive to bring ideas to life in the digital world.
+          <h1 className="text-white text-6xl font-bold" data-aos="fade-right" data-aos-delay='600'>Olá! </h1>
+          <h3 className="text-white text-2xl font-bold my-6" data-aos="fade-right" data-aos-delay='300'>Eu sou João Paulo</h3>
+          <p className="text-white text-lg"data-aos="fade-right" data-aos-delay='100'>
+            Tenho 20 anos e sou estudante de <strong>Banco de Dados</strong> na Fatec, com formação técnica em <strong>Desenvolvimento de Sistemas</strong>.  
+            Sou apaixonado por criar soluções digitais, desde interfaces modernas e responsivas até lógica de programação, banco de dados e integração de sistemas.  
+            Tenho experiência com HTML, CSS, JavaScript, React, Node.js, Python, Oracle e MongoDB — e estou sempre aberto a aprender novas tecnologias.  
+            Busco uma oportunidade na área de <strong>TI</strong> para aplicar e expandir meus conhecimentos em diferentes áreas do desenvolvimento.
           </p>
         </div>
       </Section>
       <SpaceWarp>
-        <div className="flex flex-col text-white w-[80vw] h-[80vh] bg-black/40 items-center text-center justify-center">
-          <h1 className="text-3xl font-bold z-100 ">Section 1</h1>
+        <div id="projects" className="w-full h-full flex flex-col items-center">
+          <h1 className="text-5xl font-bold text-white z-100 mt-36">
+            Alguns de meus projetos
+          </h1>
+          <Carousel />
         </div>
       </SpaceWarp>
-      <Section>
-        <div className="w-3/6 h-3/6 flex flex-col items-center justify-center bg-blue-400">
-          <h1 className="text-3xl font-bold z-100 ">Section 2</h1>
-        </div>
-      </Section>
       <BacksideCubes>
-        <div className="w-3/6 h-3/6 flex flex-col items-center justify-center bg-black/20 backdrop-blur-md text-white">
-          <h1 className="text-3xl font-bold z-100 ">Section 3</h1>
+        <div id="skills" className="w-8/12 h-8/12 flex flex-col px-0 py-6 rounded-3xl items-center justify-center bg-black/60 backdrop-blur-md text-white">
+          <h1 className="text-3xl font-bold z-100">Minhas habilidades</h1>
+          <div className="w-[80%] h-[95%] flex items-center justify-center">
+            <Skills />
+          </div>
         </div>
       </BacksideCubes>
+      <Contato visible={showContato} onClose={() => setShowContato(false)} />
     </div>
   );
 }

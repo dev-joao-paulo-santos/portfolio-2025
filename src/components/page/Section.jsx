@@ -1,5 +1,4 @@
 import React from "react";
-import SpaceWarp from "./SpaceWarp";
 
 const Section = React.forwardRef(({children, background}, ref) => {
   return (
