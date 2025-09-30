@@ -25,7 +25,7 @@ export default function Skills() {
     ],
     "Ferramentas": [
       { name: "Git", icon: <FaGitAlt className="text-3xl text-orange-600" /> },
-      { name: "GitHub", icon: <FaGithub className="text-3xl text-gray-800 dark:text-white" /> },
+      { name: "GitHub", icon: <FaGithub className="text-3xl text-white" /> },
       { name: "VS Code", icon: <VscVscode className="text-3xl text-blue-500" /> },
       { name: "Figma", icon: <FaFigma className="text-3xl text-pink-500" /> },
       { name: "Office", icon: <FaMicrosoft className="text-3xl text-red-500" /> },
