@@ -55,23 +55,17 @@ function App() {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            Sou desenvolvedor de software e estudante de Banco de Dados na
-            Fatec. Tenho 20 anos e gosto de transformar ideias em soluções
-            digitais funcionais, modernas e bem estruturadas. Crio desde
-            interfaces responsivas até integrações completas entre front-end,
-            back-end e banco de dados. Também adoro explorar áreas novas como
-            jogos 3D e automações. Possuo formação técnica em Desenvolvimento de
-            Sistemas e experiência prática em diversas linguagens e ferramentas,
-          e estou sempre aberto a aprender novas
-            tecnologias. Atualmente, busco oportunidades para aplicar meus
-            conhecimentos em projetos reais e continuar evoluindo como
-            desenvolvedor.
+            Um jovem desenvolvedor Full-Stack e tecnólogo em Banco de Dados, com
+            experiência em projetos web envolvendo front-end, back-end e banco
+            de dados, focado em criar soluções funcionais, modernas e bem
+            estruturadas, como interfaces responsivas, APIs e sistemas web
+            integrados a banco de dados.
           </p>
         </div>
       </Section>
       <SpaceWarp>
         <div id="projects" className="w-full h-full flex flex-col items-center">
-          <h1 className="text-5xl font-bold text-white z-100 mt-36">
+          <h1 className="text-5xl font-bold text-white z-100 mt-16">
             Alguns de meus projetos
           </h1>
           <Carousel />
@@ -80,9 +74,9 @@ function App() {
       <BacksideCubes>
         <div
           id="skills"
-          className="w-8/12 h-8/12 flex flex-col px-0 py-6 rounded-3xl items-center justify-center bg-black/60 backdrop-blur-md text-white"
+          className="w-8/12 h-[95%] flex flex-col px-0 py-6 rounded-3xl items-center justify-center bg-black/60 backdrop-blur-md text-white"
         >
-          <h1 className="text-3xl font-bold z-100">Minhas habilidades</h1>
+          <h1 className="text-2xl font-bold z-100">Minhas habilidades</h1>
           <div className="w-[80%] h-[95%] flex items-center justify-center">
             <Skills />
           </div>

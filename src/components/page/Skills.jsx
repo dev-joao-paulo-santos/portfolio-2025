@@ -33,7 +33,7 @@ export default function Skills() {
   };
 
   return (
-    <section className="max-w-4xl mx-auto py-12 px-6">
+    <section className="max-w-4xl mx-auto py-5 px-6 scale-75">
 
       <div className="space-y-8">
         {Object.entries(skills).map(([category, items]) => (
@@ -45,7 +45,7 @@ export default function Skills() {
                   key={skill.name}
                   className="flex items-center gap-2 px-4 py-3 bg-gray-800 rounded-xl flex-col"
                 >
-                  <span className="text-4xl">{skill.icon}</span>
+                  <span className="text-3xl">{skill.icon}</span>
                   <span className="text-xs font-medium">{skill.name}</span>
                 </div>
               ))}

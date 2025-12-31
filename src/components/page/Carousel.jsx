@@ -81,7 +81,7 @@ const projects = [
 
 const Carousel = () => {
   return (
-    <div className="w-full h-[40%] flex mt-32 justify-center">
+    <div className="w-full h-[45%] flex mt-24 justify-center">
       <Swiper
         modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
         effect="coverflow"
@@ -96,7 +96,7 @@ const Carousel = () => {
         {projects.map((project) => (
           <SwiperSlide
             key={project.id}
-            className="flex w-100vw h-full justify-center backdrop-blur-sm rounded-lg"
+            className="flex h-full justify-center backdrop-blur-sm rounded-lg"
           >
             <div
               className={`w-full h-full 
@@ -111,9 +111,11 @@ const Carousel = () => {
                 >
                   {project.title}
                 </h2>
-                <p className="text-lg mt-5 font-[Raleway]">
+                <div className="flex flex-col">
+                <p className="text-lg text-center mt-5 font-[Raleway]">
                   {project.description}
                 </p>
+                </div>
               </div>
             </div>
           </SwiperSlide>

@@ -34,10 +34,10 @@ export default function Contato({ visible, onClose }) {
       {visible && (
         <motion.div
           className="fixed inset-0 flex items-center justify-end bg-black backdrop-blur-sm bg-opacity-70 z-50"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: .4 }}
-          transition={{ duration: .5, ease: "easeInOut" }}
+          exit={{ opacity: 1 }}
+          transition={{ duration: .6, ease: "easeOut" }}
         >
           <motion.div
             className="relative w-full max-w-sm h-full bg-white dark:bg-slate-700 shadow-lg p-6 flex flex-col"
@@ -54,16 +54,16 @@ export default function Contato({ visible, onClose }) {
               <FaTimes size={20} />
             </button>
 
-            <h2 className="text-2xl font-bold text-center my-16">Fale comigo!</h2>
+            <h2 className="text-2xl text-white font-bold text-center my-16">Fale comigo!</h2>
 
-            <div className="flex flex-col gap-4 mt-8">
+            <div className="flex flex-col items-center scale-110 gap-4 mt-8">
               {contacts.map((contact) => (
                 <a
                   key={contact.name}
                   href={contact.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-3 px-4 py-2 rounded-xl shadow-md transition transform hover:scale-105 ${contact.color}`}
+                  className={`w-[50%] flex items-center gap-3 px-4 py-2 rounded-xl shadow-md transition transform hover:scale-105 ${contact.color}`}
                 >
                   {contact.icon}
                   <span className="font-medium">{contact.name}</span>

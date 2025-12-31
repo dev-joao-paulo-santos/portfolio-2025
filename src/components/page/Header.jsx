@@ -2,7 +2,7 @@ import React from "react";
 
 export const Header = ({onContatoClick}) => {
   return (
-    <header className="w-full h-[12vh] bg-[#000000] flex items-center justify-center z-30">
+    <header className="w-full h-[12vh] bg-[#000000] flex items-center justify-center">
       <nav className=" w-11/12 flex items-center justify-between">
         <h2 className="text-white text-4xl font-bold">João Paulo</h2>
         <ul className="w-6/12 flex justify-around text-white">
