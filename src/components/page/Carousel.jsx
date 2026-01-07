@@ -77,6 +77,15 @@ const projects = [
       "Projeto de conclusão do curso técnico em Desenvolvimento de Sistemas, desenvolvido em equipe, recebendo o 1° lugar na apresentação final",
     color: "bg-violet-800/40",
   },
+  {
+    id: 9,
+    title: "3D Editor for Warehouse Layouts",
+    link: "https://3-d-editor-for-warehouse-layouts.vercel.app/",
+    description:
+      "Projeto de conclusão do curso de Tecnologia em Banco de Dados, desenvolvido em React Three Fiber e com MongoDB.",
+    color: "bg-lime-800/40",
+  },
+
 ];
 
 const Carousel = () => {
